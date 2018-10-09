@@ -27,7 +27,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        removeItem: (product) => dispatch({ type: 'REMOVE_FROM_CART', payload: product })
+        removeItem: (product, index) => {
+            dispatch({ type: 'REMOVE_FROM_CART', payload: { ...product, index } })
+        }
     }
 }
 

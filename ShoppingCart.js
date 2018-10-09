@@ -17,7 +17,6 @@ export default class ShoppingCart extends Component {
   }
 }
 
-
 const AppStackNavigator = createStackNavigator({
     Home: HomeScreen,
     Electronics: ElectronicsScreen,

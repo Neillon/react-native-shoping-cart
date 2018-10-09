@@ -12,7 +12,7 @@ class ElectronicsScreen extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={styles.container}>
         <Products products={electronics} onPress={this.props.addItemToCart} />
       </View>
     );
@@ -26,3 +26,11 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(null, mapDispatchToProps)(ElectronicsScreen)
+
+const styles = {
+  container: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+  }
+}
