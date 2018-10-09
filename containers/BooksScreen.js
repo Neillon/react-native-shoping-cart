@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import { books } from '../data';
 import Products from '../components/Products';
 import { connect } from 'react-redux';
@@ -12,9 +12,9 @@ class BooksScreen extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <ScrollView style={{ backgroundColor: '#FFF' }}>
         <Products products={books} onPress={this.props.addItemToCart} />
-      </View>
+      </ScrollView>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import { electronics } from '../data';
 import Products from '../components/Products';
 import { connect } from 'react-redux';
@@ -12,9 +12,9 @@ class ElectronicsScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={{ backgroundColor: '#FFF' }}>
         <Products products={electronics} onPress={this.props.addItemToCart} />
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -26,11 +26,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(null, mapDispatchToProps)(ElectronicsScreen)
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-  }
-}
